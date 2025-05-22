@@ -13,8 +13,8 @@ RUN python -m nltk.downloader stopwords
 
 # Copy the application files, including the .joblib files
 COPY app.py .
-COPY tf_idf_VotingClassifier.joblib .
-COPY tfidf_vectorizer.joblib .
+COPY checkpoint-model/tf_idf_VotingClassifier.joblib .
+COPY checkpoint-model/tfidf_vectorizer.joblib .
 
 # Expose the port that Gradio will use
 EXPOSE 7860

@@ -163,8 +163,8 @@ with gr.Blocks(theme=Soft(), css=custom_css) as app:
         """
         # Topic Classification App
         <div class="description">
-        Enter text to classify it into one of 20 categories, such as technology, recreation, or politics.  
-        Try the example inputs below or type your own text!
+        Enter an economic text, article, or report to classify it into one of 8 specialized topics, such as Earnings, Acquisitions, Crude Oil, International Trade, and more.
+        Try the example inputs below or type your own text to get started!
         </div>
         """
     )
