@@ -11,10 +11,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install NLTK data
 RUN python -m nltk.downloader stopwords
 
+# Create checkpoint-model directory
+RUN mkdir -p checkpoint-model
+
 # Copy the application files, including the .joblib files
 COPY app.py .
-COPY checkpoint-model/tf_idf_VotingClassifier-2.joblib .
-COPY checkpoint-model/tfidf_vectorizer-2.joblib .
+COPY checkpoint-model/tf_idf_VotingClassifier-2.joblib checkpoint-model/
+COPY checkpoint-model/tfidf_vectorizer-2.joblib checkpoint-model/
 
 # Expose the port that Gradio will use
 EXPOSE 7860
