@@ -83,9 +83,8 @@ def classify_text(text, model_path, vectorizer_path=None):
 # Example usage
 
 # Update these paths to your actual model and vectorizer files
-current_directory = os.getcwd()
-model_path = current_directory + "./tf_idf_VotingClassifier-2.joblib"
-vectorizer_path = current_directory + './tfidf_vectorizer-2.joblib'
+model_path = "./checkpoint-model/tf_idf_VotingClassifier-2.joblib"
+vectorizer_path = './checkpoint-model/tfidf_vectorizer-2.joblib'
 
 def predict(input_text):
     label_mapping = {
